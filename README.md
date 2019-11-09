@@ -1,9 +1,11 @@
 # DADA2 on Farm HPC
 Contains code used to run DADA2 and create a phylogenetic tree on the Farm (research and teaching cluster for the College of Agricultural and Environmental Sciences) and using the terminal.
 
-## DADA2 inputs
 - DADA2.R contains the code used for the DADA2 pipeline
 - DADA2.sh job script
+- sbatch ~/DADA2.sh in the terminal to begin process
+
+## DADA2 inputs
 - Sequencing files formatted correctly for input into DADA2
 
 ## DADA2 outputs
