@@ -10,5 +10,5 @@
 #SBATCH --mail-user=aigwe@ucdavis.edu
 #SBATCH --export==ALL
 
-
+module load R
 Rscript /home/aigwe/phenol/code/DADA2.R
