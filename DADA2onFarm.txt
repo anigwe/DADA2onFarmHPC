@@ -1,0 +1,51 @@
+Running DADA2 on Farm cluster:
+
+#Download a compiler
+Install gcc-4.8-infrastructure compiler for 64-bit AMD-compatible processors (x86_64, AMD64, Intel64, em64t) from https://gcc.gnu.org/wiki/GFortranBinaries#GAnchor.28GNU.2BAC8-Linux.29
+http://gfortran.meteodat.ch/download/
+https://ftp.gnu.org/gnu/gcc/
+
+#Secure copy compiler into your personal directory on the cluster
+scp -P 2022 .../Downloads/filename [username]@agri.cse.ucdavis.edu:/home/username
+
+#Decompress the compiler
+#filename.tar.xz decompresses to lib64 (or something similar)
+tar xvfj filename.tar.xz 
+
+
+#Request resources to run R interactively
+srun -n 16 -p bigmemht -t 69 --pty bash -i
+
+#Load the R module
+module load R
+
+#Open R
+R
+
+#Install library
+source("https://bioconductor.org/biocLite.R")
+biocLite("dada2")
+
+#requires R 3.6.1 and Bioconductor version 3.10
+if (!requireNamespace("BiocManager", quietly = TRUE))
+    install.packages("BiocManager")
+BiocManager::install("dada2", version = "3.10")
+
+#Warning in install.packages(update[instlib == l, "Package"], l, contriburl = contriburl,  :'lib = "/usr/lib/R/site-library"' is not writable
+#Would you like to use a personal library instead?  (y/n)
+y
+
+#Place the decompressed compiler file (lib64) into this personal library
+mv /home/username/lib64 /home/username/R/x86_64-pc-linux-gnu-library/3.4
+
+#Install other libraries
+biocLite("phangorn")
+biocLite("DECIPHER")
+
+#Submit R script via slurm
+sbatch ./DADA2.sh
+
+#Check to see if the script is running
+squeue -u username
+
+
