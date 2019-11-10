@@ -51,25 +51,25 @@ Contains code used to run DADA2 and create a phylogenetic tree on the Farm (rese
   - Contains R code used for constructing the phylogenetic tree
 
 - ctri-tree.23909765.%N.out
-Standard output file with the job number in the name. Contains information related to job run time and memory usage.
+  - Standard output file with the job number in the name. Contains information related to job run time and memory usage.
 
 - ctri-tree.23909765.bigmem10.out
-Output file named with job number and the node the job landed on. Contains information related to the R environment.
+  - Output file named with job number and the node the job landed on. Contains information related to the R environment.
 
 - ctri-tree.err
-Errors written to this file
+  - Errors written to this file
 
 - phylo_tree.sh
-Script that was used to sbatch file containing R code
+  - Script that was used to sbatch file containing R code
 
 - seqtab.nochim_alignment.RDS
-RDS of alignment step
+  - RDS of alignment step
 
 - seqtab.nochim_fit.RDS
-RDS of phangorn fit step
+  - RDS of phangorn fit step
 
 - seqtab.nochim_tree.RData
-Saved disk image of R environment
+  - Saved disk image of R environment
 
 - seqtab.nochim_tree.RDS
   - RDS of DECIPHER constructed tree
