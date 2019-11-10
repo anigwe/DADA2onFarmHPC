@@ -11,4 +11,5 @@
 
 #SBATCH --export==ALL
 
-Rscript /home/aigwe/CTRI/ctri_phylo_tree.R
+module load R
+Rscript /home/aigwe/CTRI/code/ctri_phylo_tree.R
