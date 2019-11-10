@@ -1,8 +1,10 @@
 # DADA2 on Farm HPC
 Contains code used to run DADA2 and create a phylogenetic tree on the Farm (research and teaching cluster for the College of Agricultural and Environmental Sciences) and using the terminal.
+- Download Cyberduck to easily interface with folders in the HPC.
+  - SFTP (SSH file transfer protocol), server: agri.cse.ucdavis.edu, port: 2022
 
 - DADA2.R contains the code used for the DADA2 pipeline
-- DADA2.sh job script
+- DADA2.sh job script (include absolute file location of DADA2.R)
 - sbatch ~/DADA2.sh in the terminal to begin process
 
 ## DADA2 inputs
