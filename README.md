@@ -7,6 +7,8 @@ Contains code used to run DADA2 and create a phylogenetic tree on the Farm (rese
 - DADA2.sh job script (include absolute file location of DADA2.R)
 - sbatch ~/DADA2.sh in the terminal to begin process
 
+Run R interactively until strepdrought_plotErrF.pdf and strepdrought_plotErrr.pdf is produced. Download those files and use them to determine where to trim forward and reverse reads. 
+
 ## DADA2 inputs
 - Sequencing files formatted correctly for input into DADA2
 
