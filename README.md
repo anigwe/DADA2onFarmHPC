@@ -1,7 +1,7 @@
 # Relevant information about Farm and Slurm
-https://github.com/WhiteheadLab/Lab_Wiki/wiki/Using-the-farm-cluster
-https://github.com/ngs-docs/2016-adv-begin-shell-genomics/blob/master/ucd-farm-intro.md
-https://github.com/dib-lab/farm-notes
+- https://github.com/WhiteheadLab/Lab_Wiki/wiki/Using-the-farm-cluster
+- https://github.com/ngs-docs/2016-adv-begin-shell-genomics/blob/master/ucd-farm-intro.md
+- https://github.com/dib-lab/farm-notes
 
 # DADA2 on Farm HPC
 Contains code used to run DADA2 and create a phylogenetic tree on the Farm (research and teaching cluster for the College of Agricultural and Environmental Sciences) and using the terminal.
