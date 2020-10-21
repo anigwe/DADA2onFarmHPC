@@ -1,5 +1,10 @@
 Running DADA2 on Farm cluster:
 
+#Assumptions
+1. You have access to Farm cluster
+2. Remotely log in using your username
+3. You are NOT on the head node
+
 #Download a compiler
 Install gcc-4.8-infrastructure compiler for 64-bit AMD-compatible processors (x86_64, AMD64, Intel64, em64t) from https://gcc.gnu.org/wiki/GFortranBinaries#GAnchor.28GNU.2BAC8-Linux.29
 http://gfortran.meteodat.ch/download/
@@ -12,7 +17,6 @@ scp -P 2022 .../Downloads/filename [username]@agri.cse.ucdavis.edu:/home/usernam
 #filename.tar.xz decompresses to lib64 (or something similar)
 tar xvfj filename.tar.xz 
 
-
 #Request resources to run R interactively
 srun -n 16 -p bigmemht -t 69 --pty bash -i
 
@@ -22,7 +26,7 @@ module load R
 #Open R
 R
 
-#Install library
+#Install library - use biocManager
 source("https://bioconductor.org/biocLite.R")
 biocLite("dada2")
 
@@ -38,7 +42,7 @@ y
 #Place the decompressed compiler file (lib64) into this personal library
 mv /home/username/lib64 /home/username/R/x86_64-pc-linux-gnu-library/3.4
 
-#Install other libraries
+#Install other libraries - use biocManager
 biocLite("phangorn")
 biocLite("DECIPHER")
 
